@@ -1,0 +1,4 @@
+#id,item,quantity,price
+001,HP,2,85000
+002,Case,5,50000
+003,Charger,1,100000
