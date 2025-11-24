@@ -5,18 +5,18 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-        List<String> data = Penjualan.readFromFile("sales.txt");
+        List<String> salesData = Penjualan.readFromFile("sales.txt");
 
-        List<Transaction> trx = Proses.parseSalesData(data);
+        List<Transaction> transactionData = Proses.parseSalesData(salesData);
 
-        double total = Proses.getTotalSales(trx);
+        double total = Proses.getTotalSales(transactionData);
 
-        Laporan.writeReport("report.txt", total);
+        Laporan.writeReport("report.txt", transactionData, total);
 
-        System.out.println("Laporan berhasil dibuat!");
+        System.out.println("Laporan berhasil dibuat, Cek report.txt");
 
-        for(String dataSales: data){
-            System.out.println(dataSales);
+        for(String data : salesData) {
+            System.out.println(data);
         }
     }
 }

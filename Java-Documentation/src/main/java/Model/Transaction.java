@@ -13,6 +13,22 @@ public class Transaction {
         this.price = price;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public String getItem() {
+        return item;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
     public double getTotal() {
         return quantity * price;
     }
