@@ -1,40 +1,24 @@
 package Model;
 
 public class Transaction {
-    private int id;
-    private String item;
+    private String id;
+    private String name;
     private int quantity;
-    private double price;
+    private int price;
 
-    public Transaction(int id, String item, int quantity, double price) {
+    public Transaction(String id, String name, int quantity, int price) {
         this.id = id;
-        this.item = item;
+        this.name = name;
         this.quantity = quantity;
         this.price = price;
     }
 
-    public int getId() {
-        return id;
-    }
+    public String getId() { return id; }
+    public String getName() { return name; }
+    public int getQuantity() { return quantity; }
+    public int getPrice() { return price; }
 
-    public String getItem() {
-        return item;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public double getTotal() {
+    public int getTotal() {
         return quantity * price;
-    }
-
-    @Override
-    public String toString() {
-        return id + "," + item + "," + quantity + "," + price;
     }
 }
